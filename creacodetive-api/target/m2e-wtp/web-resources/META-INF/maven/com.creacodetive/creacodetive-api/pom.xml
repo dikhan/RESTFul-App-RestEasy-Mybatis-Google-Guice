@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.creacodetive</groupId>
+		<artifactId>creacodetive-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../creacodetive-parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>creacodetive-api</artifactId>
+	<packaging>war</packaging>
+
+	<name>Creacodetive API Server</name>
+	<description>Creacodetive:: API Server Module</description>
+	<url>http://www.creacodetive.com</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>3.8.1</junit.version>
+		<resteasy-jaxrs.version>3.0.6.Final</resteasy-jaxrs.version>
+		<resteasy-jackson-provider.version>3.0.6.Final</resteasy-jackson-provider.version>
+		<guice.version>3.0</guice.version>
+		<guice-servlet.version>3.0-rc3</guice-servlet.version>
+		<resteasy-guice.version>3.0.6.Final</resteasy-guice.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>JBoss repository</id>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+
+		<!-- Creacodetive dependendies -->
+		<dependency>
+			<groupId>com.creacodetive</groupId>
+			<artifactId>creacodetive-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.creacodetive</groupId>
+			<artifactId>creacodetive-orm</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- RESTEasy -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>${resteasy-jaxrs.version}</version>
+		</dependency>
+
+		<!-- Jackson provider will convert objects the returned to JSON automatically. -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>${resteasy-jackson-provider.version}</version>
+		</dependency>
+
+		<!-- Google Guice -->
+<!-- 		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>${guice.version}</version>
+		</dependency> -->
+		
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-servlet</artifactId>
+			<version>${guice-servlet.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-guice</artifactId>
+			<version>${resteasy-guice.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>creacodetive-api</finalName>
+	</build>
+
+</project>
