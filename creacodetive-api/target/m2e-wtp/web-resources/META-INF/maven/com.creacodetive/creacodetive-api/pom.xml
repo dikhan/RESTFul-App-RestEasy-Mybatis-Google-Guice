@@ -20,7 +20,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.13.1</junit.version>
-		<resteasy-jaxrs.version>3.0.6.Final</resteasy-jaxrs.version>
+		<resteasy-jaxrs.version>3.0.11.Final</resteasy-jaxrs.version>
 		<resteasy-jackson-provider.version>3.0.6.Final</resteasy-jackson-provider.version>
 		<guice.version>3.0</guice.version>
 		<guice-servlet.version>3.0-rc3</guice-servlet.version>
